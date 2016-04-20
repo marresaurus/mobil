@@ -1,0 +1,31 @@
+<ng-include src="'partials/topbar.html'"></ng-include>
+<div class="row right">
+	<h1>Dropdown Select</h1>
+    <p cBtn>You have selected: {{ddSelectSelected}}</p>
+    <a href='' title=''
+        dropdown-menu="ddSelectOptions"
+        dropdown-model="ddSelectSelected"
+        dropdown-item-label="text">
+        Menu
+    </a>
+</div>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-2">
+			<button id="plusRating" class="btn rating" ng-click="setRating(1)">
+				<span class="glyphicon glyphicon-chevron-up"></span>
+			</button>
+			<p class="rating score center">{{getRating()}}</p>
+	        
+			<button id="minusRating" class="btn rating" ng-click="setRating(-1)">
+				<span class="glyphicon glyphicon-chevron-down"></span>
+			</button>
+		</div>
+		<div class="col-xs-8 center"><h3>Joke: {{getRandom()}}</h3> </div>
+		<div class="col-xs-2"><button class="btn glyphicon glyphicon-heart-empty heart" ng-click="alert()"></button></div>
+	</div>
+</div>
+
+<div class="row center">
+	<button class="btn njBtn">New Joke</button>
+</div>
